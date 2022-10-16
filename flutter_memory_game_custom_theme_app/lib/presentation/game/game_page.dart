@@ -21,7 +21,7 @@ class _GamePageState extends State<GamePage> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       context.read<ThemeStore>().getTheme(widget.theme);
     });
   }
