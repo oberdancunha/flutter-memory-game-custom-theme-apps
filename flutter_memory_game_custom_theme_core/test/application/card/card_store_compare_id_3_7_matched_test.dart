@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter_memory_game_custom_theme_core/application/card/card_state.dart';
 import 'package:flutter_memory_game_custom_theme_core/application/card/card_store.dart';
 import 'package:flutter_memory_game_custom_theme_core/domain/card/card.dart';
@@ -10,7 +8,7 @@ import 'package:triple_test/triple_test.dart';
 import '../../mock_data/kids_activities_data_id_3_reveal_mocked.dart';
 import '../../mock_data/kids_activities_data_ids_3_7_matched.dart';
 
-class MockCardStore extends MockStore<Void, CardState> implements CardStore {}
+class MockCardStore extends MockStore<Exception, CardState> implements CardStore {}
 
 void main() {
   late MockCardStore mockCardStore;
@@ -59,7 +57,7 @@ void setUpInitialState(
   KtList<Card> cardsIds3and7MatchedMocked,
   int secondCardIdToReveal,
 ) {
-  whenObserve<Void, CardState>(
+  whenObserve<Exception, CardState>(
     mockCardStore,
     input: () => mockCardStore.compareCardsRevealed(secondCardIdToReveal),
     initialState: CardState(
@@ -78,8 +76,6 @@ void setUpInitialState(
         ),
       ),
       Triple(
-        isLoading: false,
-        event: TripleEvent.state,
         state: CardState(
           cards: cardsIds3and7MatchedMocked,
           cardRevealed: 0,

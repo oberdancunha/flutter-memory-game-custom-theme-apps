@@ -1,11 +1,9 @@
-import 'dart:ffi';
-
 import 'package:flutter_memory_game_custom_theme_dependency_module/flutter_memory_game_custom_theme_dependency_module.dart';
 
 import '../../domain/card/i_card_repository.dart';
 import 'card_state.dart';
 
-class CardStore extends StreamStore<Void, CardState> {
+class CardStore extends StreamStore<Exception, CardState> {
   final ICardRepository cardRepository;
 
   CardStore({
