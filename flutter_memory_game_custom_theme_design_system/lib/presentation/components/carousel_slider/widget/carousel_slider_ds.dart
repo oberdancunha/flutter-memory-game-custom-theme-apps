@@ -34,9 +34,8 @@ class _CarouselSliderDSState extends State<CarouselSliderDS> {
     } else {
       _destroyBinds = true;
     }
-    Modular.to.pushNamedAndRemoveUntil(
+    Modular.to.pushNamed(
       '/home/game/',
-      (p0) => false,
       arguments: [
         widget.cardThemes.elementAt(index).theme,
         widget.cardThemes.elementAt(index).cardDataSource,
