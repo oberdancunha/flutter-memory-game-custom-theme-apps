@@ -1,4 +1,3 @@
-import 'dart:ffi';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -15,7 +14,8 @@ class DesignSystemPage extends StatelessWidget {
   Widget build(BuildContext context) => ScreenUtilInit(
         designSize: const Size(360, 640),
         minTextAdapt: true,
-        builder: () => ScopedBuilder<ThemeStore, Void, ThemeCard>(
+        builder: (context, __) => ScopedBuilder<ThemeStore, Exception, ThemeCard>(
+          store: Modular.get<ThemeStore>(),
           onState: (_, theme) {
             if (Platform.isIOS) {
               SystemChrome.setSystemUIOverlayStyle(

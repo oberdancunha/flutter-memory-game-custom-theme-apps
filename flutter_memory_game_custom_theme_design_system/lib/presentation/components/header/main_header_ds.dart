@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_memory_game_custom_theme_dependency_module/flutter_memory_game_custom_theme_dependency_module.dart';
 
@@ -11,7 +9,8 @@ class MainHeaderDS extends StatelessWidget {
   const MainHeaderDS({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) => ScopedBuilder<ThemeStore, Void, ThemeCard>(
+  Widget build(BuildContext context) => ScopedBuilder<ThemeStore, Exception, ThemeCard>(
+        store: Modular.get<ThemeStore>(),
         onState: (_, state) => SizedBox(
           height: getHeight(150).toDouble(),
           width: MediaQuery.of(context).size.width,

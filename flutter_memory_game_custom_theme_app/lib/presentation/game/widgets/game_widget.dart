@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart' hide Card;
 import 'package:flutter_memory_game_custom_theme_core/application/card/card_state.dart';
 import 'package:flutter_memory_game_custom_theme_core/application/card/card_store.dart';
@@ -19,13 +17,14 @@ class _GameWidgetState extends State<GameWidget> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       context.watch<CardStore>().initGame();
     });
   }
 
   @override
-  Widget build(BuildContext context) => ScopedBuilder<CardStore, Void, CardState>(
+  Widget build(BuildContext context) => ScopedBuilder<CardStore, Exception, CardState>(
+        store: Modular.get<CardStore>(),
         onState: (_, state) => _buildCards(
           context: context,
           cards: state.cards,
