@@ -8,11 +8,11 @@ Este projeto é uma extensão do projeto [Jogo da memória](https://github.com/o
 
 Algumas das tecnologias/bibliotecas utilizadas na construção do aplicativo foram:
 
- - Flutter toolkit 2.10.2 (stable)
- - Dart 2.16.1
- - flutter_modular 4.5.0
- - flutter_triple: 1.2.6
- - flutter_screenutil 5.2.0
+ - Flutter toolkit 3.3.4 (stable)
+ - Dart 2.18.2
+ - flutter_modular 5.0.3
+ - flutter_triple: 1.2.7+4
+ - flutter_screenutil 5.5.4
  - carousel_slider: 4.0.0
  - dart_code_metrics 4.10.1
  - freezed_annotation: 1.1.0
