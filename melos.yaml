@@ -1,0 +1,30 @@
+name: flutter_memory_game_custom_theme
+repository: https://github.com/oberdancunha/flutter-memory-game-custom-theme-apps
+
+ide:
+  intellij:
+    enabled: false
+
+packages:
+  - flutter_memory_game_custom_theme_dependency_module
+  - flutter_memory_game_custom_theme_core
+  - flutter_memory_game_custom_theme_design_system
+  - flutter_memory_game_custom_theme_app
+
+command:
+  bootstrap:
+    usePubspecOverrides: true
+  version:
+    updateGitTagRefs: true
+    branch: main
+
+scripts:
+  test:flutter:
+    run: melos exec flutter test --coverage
+    description: Run test in all projects packages.
+    select-package:
+      flutter: true
+      dir-exists: test
+
+  analyze:
+    exec: dart analyze .
