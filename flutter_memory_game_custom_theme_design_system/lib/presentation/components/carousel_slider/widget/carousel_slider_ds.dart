@@ -53,7 +53,7 @@ class _CarouselSliderDSState extends State<CarouselSliderDS> {
 
           return GestureDetector(
             child: Container(
-              width: getImageSize(120).toDouble(),
+              width: getWidth(120).toDouble(),
               margin: const EdgeInsets.symmetric(horizontal: 5),
               decoration: BoxDecoration(
                 color: Theme.of(context).colorScheme.primary,
@@ -69,7 +69,7 @@ class _CarouselSliderDSState extends State<CarouselSliderDS> {
                   Text(
                     cardTheme.theme.title,
                     style: TextStyle(
-                      fontSize: 16,
+                      fontSize: getFontSize(16).toDouble(),
                       fontFamily: cardTheme.theme.fontFamily,
                       color: Theme.of(context).colorScheme.secondary,
                     ),
