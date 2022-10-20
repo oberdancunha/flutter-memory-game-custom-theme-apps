@@ -18,7 +18,7 @@ class MainHeaderDS extends StatelessWidget {
             alignment: Alignment.center,
             children: [
               Opacity(
-                opacity: Theme.of(context).colorScheme.brightness == Brightness.light ? 0.2 : 0.7,
+                opacity: state.backgroundLogoOpacity,
                 child: Image.asset(
                   state.backgroundImageTitle,
                   fit: BoxFit.cover,
