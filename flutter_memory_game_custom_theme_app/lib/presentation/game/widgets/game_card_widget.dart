@@ -1,10 +1,10 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_memory_game_custom_theme_core/application/card/card_store.dart';
 import 'package:flutter_memory_game_custom_theme_dependency_module/flutter_memory_game_custom_theme_dependency_module.dart';
 import 'package:flutter_memory_game_custom_theme_design_system/application/theme_store.dart';
 import 'package:flutter_memory_game_custom_theme_design_system/utils/screen_util_ds.dart';
+
+import 'revealed_card_transition_widget.dart';
 
 class GameCardWidget extends StatefulWidget {
   final int id;
@@ -56,10 +56,10 @@ class _GameCardWidgetState extends State<GameCardWidget> {
       },
       child: AnimatedSwitcher(
         duration: const Duration(milliseconds: 800),
-        transitionBuilder: (widget, animation) => _revealedCardTransition(
-          widget,
-          animation,
-          letsRevealCardInCurrentPlay,
+        transitionBuilder: (widget, animation) => RevealedCardTransitionWidget(
+          widget: widget,
+          animation: animation,
+          letsRevealCardInCurrentPlay: letsRevealCardInCurrentPlay,
         ),
         switchInCurve: Curves.easeInBack,
         switchOutCurve: Curves.easeInBack.flipped,
@@ -106,45 +106,4 @@ class _GameCardWidgetState extends State<GameCardWidget> {
       cardStore.unlockCardReveal();
     });
   }
-
-  AnimatedBuilder _revealedCardTransition(
-    Widget widget,
-    Animation<double> animation,
-    bool letsRevealCardInCurrentPlay,
-  ) {
-    final animationRotate = Tween<double>(
-      begin: pi,
-      end: 0,
-    ).animate(animation);
-
-    return AnimatedBuilder(
-      animation: animation,
-      builder: (_, __) {
-        final isUnder = ValueKey(letsRevealCardInCurrentPlay) == widget.key;
-        final tilt = _calculateTilt(animation.value, isUnder);
-        final radians = isUnder ? min(animationRotate.value, pi / 2) : animationRotate.value;
-
-        return Transform(
-          transform: letsRevealCardInCurrentPlay
-              ? _revealCardRotate(radians, tilt)
-              : _hideOrMatchCardRotate(radians, tilt),
-          alignment: Alignment.center,
-          child: widget,
-        );
-      },
-      child: widget,
-    );
-  }
-
-  double _calculateTilt(double animationValue, bool isUnder) {
-    var tilt = ((animationValue - 0.5).abs() - 0.5) * 0.003;
-
-    return tilt *= isUnder ? -1.0 : 1.0;
-  }
-
-  Matrix4 _revealCardRotate(double radians, double tilt) =>
-      Matrix4.rotationY(radians)..setEntry(3, 0, tilt);
-
-  Matrix4 _hideOrMatchCardRotate(double radians, double tilt) =>
-      Matrix4.rotationX(radians)..setEntry(3, 1, tilt);
 }
