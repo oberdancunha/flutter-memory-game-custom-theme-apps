@@ -12,30 +12,7 @@ part of 'theme.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$ThemeCardTearOff {
-  const _$ThemeCardTearOff();
-
-  _ThemeCard call(
-      {required String title,
-      required String backgroundImageTitle,
-      required String backgroundLogo,
-      required ThemeData themeData,
-      String? fontFamily}) {
-    return _ThemeCard(
-      title: title,
-      backgroundImageTitle: backgroundImageTitle,
-      backgroundLogo: backgroundLogo,
-      themeData: themeData,
-      fontFamily: fontFamily,
-    );
-  }
-}
-
-/// @nodoc
-const $ThemeCard = _$ThemeCardTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$ThemeCard {
@@ -43,6 +20,7 @@ mixin _$ThemeCard {
   String get backgroundImageTitle => throw _privateConstructorUsedError;
   String get backgroundLogo => throw _privateConstructorUsedError;
   ThemeData get themeData => throw _privateConstructorUsedError;
+  double get backgroundLogoOpacity => throw _privateConstructorUsedError;
   String? get fontFamily => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -53,105 +31,122 @@ mixin _$ThemeCard {
 /// @nodoc
 abstract class $ThemeCardCopyWith<$Res> {
   factory $ThemeCardCopyWith(ThemeCard value, $Res Function(ThemeCard) then) =
-      _$ThemeCardCopyWithImpl<$Res>;
+      _$ThemeCardCopyWithImpl<$Res, ThemeCard>;
+  @useResult
   $Res call(
       {String title,
       String backgroundImageTitle,
       String backgroundLogo,
       ThemeData themeData,
+      double backgroundLogoOpacity,
       String? fontFamily});
 }
 
 /// @nodoc
-class _$ThemeCardCopyWithImpl<$Res> implements $ThemeCardCopyWith<$Res> {
+class _$ThemeCardCopyWithImpl<$Res, $Val extends ThemeCard>
+    implements $ThemeCardCopyWith<$Res> {
   _$ThemeCardCopyWithImpl(this._value, this._then);
 
-  final ThemeCard _value;
   // ignore: unused_field
-  final $Res Function(ThemeCard) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? title = freezed,
-    Object? backgroundImageTitle = freezed,
-    Object? backgroundLogo = freezed,
-    Object? themeData = freezed,
+    Object? title = null,
+    Object? backgroundImageTitle = null,
+    Object? backgroundLogo = null,
+    Object? themeData = null,
+    Object? backgroundLogoOpacity = null,
     Object? fontFamily = freezed,
   }) {
     return _then(_value.copyWith(
-      title: title == freezed
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      backgroundImageTitle: backgroundImageTitle == freezed
+      backgroundImageTitle: null == backgroundImageTitle
           ? _value.backgroundImageTitle
           : backgroundImageTitle // ignore: cast_nullable_to_non_nullable
               as String,
-      backgroundLogo: backgroundLogo == freezed
+      backgroundLogo: null == backgroundLogo
           ? _value.backgroundLogo
           : backgroundLogo // ignore: cast_nullable_to_non_nullable
               as String,
-      themeData: themeData == freezed
+      themeData: null == themeData
           ? _value.themeData
           : themeData // ignore: cast_nullable_to_non_nullable
               as ThemeData,
-      fontFamily: fontFamily == freezed
+      backgroundLogoOpacity: null == backgroundLogoOpacity
+          ? _value.backgroundLogoOpacity
+          : backgroundLogoOpacity // ignore: cast_nullable_to_non_nullable
+              as double,
+      fontFamily: freezed == fontFamily
           ? _value.fontFamily
           : fontFamily // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$ThemeCardCopyWith<$Res> implements $ThemeCardCopyWith<$Res> {
-  factory _$ThemeCardCopyWith(
-          _ThemeCard value, $Res Function(_ThemeCard) then) =
-      __$ThemeCardCopyWithImpl<$Res>;
+abstract class _$$_ThemeCardCopyWith<$Res> implements $ThemeCardCopyWith<$Res> {
+  factory _$$_ThemeCardCopyWith(
+          _$_ThemeCard value, $Res Function(_$_ThemeCard) then) =
+      __$$_ThemeCardCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String title,
       String backgroundImageTitle,
       String backgroundLogo,
       ThemeData themeData,
+      double backgroundLogoOpacity,
       String? fontFamily});
 }
 
 /// @nodoc
-class __$ThemeCardCopyWithImpl<$Res> extends _$ThemeCardCopyWithImpl<$Res>
-    implements _$ThemeCardCopyWith<$Res> {
-  __$ThemeCardCopyWithImpl(_ThemeCard _value, $Res Function(_ThemeCard) _then)
-      : super(_value, (v) => _then(v as _ThemeCard));
+class __$$_ThemeCardCopyWithImpl<$Res>
+    extends _$ThemeCardCopyWithImpl<$Res, _$_ThemeCard>
+    implements _$$_ThemeCardCopyWith<$Res> {
+  __$$_ThemeCardCopyWithImpl(
+      _$_ThemeCard _value, $Res Function(_$_ThemeCard) _then)
+      : super(_value, _then);
 
-  @override
-  _ThemeCard get _value => super._value as _ThemeCard;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? title = freezed,
-    Object? backgroundImageTitle = freezed,
-    Object? backgroundLogo = freezed,
-    Object? themeData = freezed,
+    Object? title = null,
+    Object? backgroundImageTitle = null,
+    Object? backgroundLogo = null,
+    Object? themeData = null,
+    Object? backgroundLogoOpacity = null,
     Object? fontFamily = freezed,
   }) {
-    return _then(_ThemeCard(
-      title: title == freezed
+    return _then(_$_ThemeCard(
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      backgroundImageTitle: backgroundImageTitle == freezed
+      backgroundImageTitle: null == backgroundImageTitle
           ? _value.backgroundImageTitle
           : backgroundImageTitle // ignore: cast_nullable_to_non_nullable
               as String,
-      backgroundLogo: backgroundLogo == freezed
+      backgroundLogo: null == backgroundLogo
           ? _value.backgroundLogo
           : backgroundLogo // ignore: cast_nullable_to_non_nullable
               as String,
-      themeData: themeData == freezed
+      themeData: null == themeData
           ? _value.themeData
           : themeData // ignore: cast_nullable_to_non_nullable
               as ThemeData,
-      fontFamily: fontFamily == freezed
+      backgroundLogoOpacity: null == backgroundLogoOpacity
+          ? _value.backgroundLogoOpacity
+          : backgroundLogoOpacity // ignore: cast_nullable_to_non_nullable
+              as double,
+      fontFamily: freezed == fontFamily
           ? _value.fontFamily
           : fontFamily // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -167,6 +162,7 @@ class _$_ThemeCard extends _ThemeCard {
       required this.backgroundImageTitle,
       required this.backgroundLogo,
       required this.themeData,
+      required this.backgroundLogoOpacity,
       this.fontFamily})
       : super._();
 
@@ -179,50 +175,52 @@ class _$_ThemeCard extends _ThemeCard {
   @override
   final ThemeData themeData;
   @override
+  final double backgroundLogoOpacity;
+  @override
   final String? fontFamily;
 
   @override
   String toString() {
-    return 'ThemeCard(title: $title, backgroundImageTitle: $backgroundImageTitle, backgroundLogo: $backgroundLogo, themeData: $themeData, fontFamily: $fontFamily)';
+    return 'ThemeCard(title: $title, backgroundImageTitle: $backgroundImageTitle, backgroundLogo: $backgroundLogo, themeData: $themeData, backgroundLogoOpacity: $backgroundLogoOpacity, fontFamily: $fontFamily)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ThemeCard &&
-            const DeepCollectionEquality().equals(other.title, title) &&
-            const DeepCollectionEquality()
-                .equals(other.backgroundImageTitle, backgroundImageTitle) &&
-            const DeepCollectionEquality()
-                .equals(other.backgroundLogo, backgroundLogo) &&
-            const DeepCollectionEquality().equals(other.themeData, themeData) &&
-            const DeepCollectionEquality()
-                .equals(other.fontFamily, fontFamily));
+            other is _$_ThemeCard &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.backgroundImageTitle, backgroundImageTitle) ||
+                other.backgroundImageTitle == backgroundImageTitle) &&
+            (identical(other.backgroundLogo, backgroundLogo) ||
+                other.backgroundLogo == backgroundLogo) &&
+            (identical(other.themeData, themeData) ||
+                other.themeData == themeData) &&
+            (identical(other.backgroundLogoOpacity, backgroundLogoOpacity) ||
+                other.backgroundLogoOpacity == backgroundLogoOpacity) &&
+            (identical(other.fontFamily, fontFamily) ||
+                other.fontFamily == fontFamily));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(title),
-      const DeepCollectionEquality().hash(backgroundImageTitle),
-      const DeepCollectionEquality().hash(backgroundLogo),
-      const DeepCollectionEquality().hash(themeData),
-      const DeepCollectionEquality().hash(fontFamily));
+  int get hashCode => Object.hash(runtimeType, title, backgroundImageTitle,
+      backgroundLogo, themeData, backgroundLogoOpacity, fontFamily);
 
   @JsonKey(ignore: true)
   @override
-  _$ThemeCardCopyWith<_ThemeCard> get copyWith =>
-      __$ThemeCardCopyWithImpl<_ThemeCard>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_ThemeCardCopyWith<_$_ThemeCard> get copyWith =>
+      __$$_ThemeCardCopyWithImpl<_$_ThemeCard>(this, _$identity);
 }
 
 abstract class _ThemeCard extends ThemeCard {
   factory _ThemeCard(
-      {required String title,
-      required String backgroundImageTitle,
-      required String backgroundLogo,
-      required ThemeData themeData,
-      String? fontFamily}) = _$_ThemeCard;
+      {required final String title,
+      required final String backgroundImageTitle,
+      required final String backgroundLogo,
+      required final ThemeData themeData,
+      required final double backgroundLogoOpacity,
+      final String? fontFamily}) = _$_ThemeCard;
   _ThemeCard._() : super._();
 
   @override
@@ -234,9 +232,11 @@ abstract class _ThemeCard extends ThemeCard {
   @override
   ThemeData get themeData;
   @override
+  double get backgroundLogoOpacity;
+  @override
   String? get fontFamily;
   @override
   @JsonKey(ignore: true)
-  _$ThemeCardCopyWith<_ThemeCard> get copyWith =>
+  _$$_ThemeCardCopyWith<_$_ThemeCard> get copyWith =>
       throw _privateConstructorUsedError;
 }

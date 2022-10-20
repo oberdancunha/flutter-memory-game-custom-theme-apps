@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'card_dto.dart';
@@ -11,26 +12,7 @@ part of 'card_dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$CardDtoTearOff {
-  const _$CardDtoTearOff();
-
-  _CardDto call(
-      {required String name,
-      required String image,
-      required int selectedToGame}) {
-    return _CardDto(
-      name: name,
-      image: image,
-      selectedToGame: selectedToGame,
-    );
-  }
-}
-
-/// @nodoc
-const $CardDto = _$CardDtoTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$CardDto {
@@ -45,74 +27,79 @@ mixin _$CardDto {
 /// @nodoc
 abstract class $CardDtoCopyWith<$Res> {
   factory $CardDtoCopyWith(CardDto value, $Res Function(CardDto) then) =
-      _$CardDtoCopyWithImpl<$Res>;
+      _$CardDtoCopyWithImpl<$Res, CardDto>;
+  @useResult
   $Res call({String name, String image, int selectedToGame});
 }
 
 /// @nodoc
-class _$CardDtoCopyWithImpl<$Res> implements $CardDtoCopyWith<$Res> {
+class _$CardDtoCopyWithImpl<$Res, $Val extends CardDto>
+    implements $CardDtoCopyWith<$Res> {
   _$CardDtoCopyWithImpl(this._value, this._then);
 
-  final CardDto _value;
   // ignore: unused_field
-  final $Res Function(CardDto) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? image = freezed,
-    Object? selectedToGame = freezed,
+    Object? name = null,
+    Object? image = null,
+    Object? selectedToGame = null,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      image: image == freezed
+      image: null == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String,
-      selectedToGame: selectedToGame == freezed
+      selectedToGame: null == selectedToGame
           ? _value.selectedToGame
           : selectedToGame // ignore: cast_nullable_to_non_nullable
               as int,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$CardDtoCopyWith<$Res> implements $CardDtoCopyWith<$Res> {
-  factory _$CardDtoCopyWith(_CardDto value, $Res Function(_CardDto) then) =
-      __$CardDtoCopyWithImpl<$Res>;
+abstract class _$$_CardDtoCopyWith<$Res> implements $CardDtoCopyWith<$Res> {
+  factory _$$_CardDtoCopyWith(
+          _$_CardDto value, $Res Function(_$_CardDto) then) =
+      __$$_CardDtoCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String name, String image, int selectedToGame});
 }
 
 /// @nodoc
-class __$CardDtoCopyWithImpl<$Res> extends _$CardDtoCopyWithImpl<$Res>
-    implements _$CardDtoCopyWith<$Res> {
-  __$CardDtoCopyWithImpl(_CardDto _value, $Res Function(_CardDto) _then)
-      : super(_value, (v) => _then(v as _CardDto));
+class __$$_CardDtoCopyWithImpl<$Res>
+    extends _$CardDtoCopyWithImpl<$Res, _$_CardDto>
+    implements _$$_CardDtoCopyWith<$Res> {
+  __$$_CardDtoCopyWithImpl(_$_CardDto _value, $Res Function(_$_CardDto) _then)
+      : super(_value, _then);
 
-  @override
-  _CardDto get _value => super._value as _CardDto;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? image = freezed,
-    Object? selectedToGame = freezed,
+    Object? name = null,
+    Object? image = null,
+    Object? selectedToGame = null,
   }) {
-    return _then(_CardDto(
-      name: name == freezed
+    return _then(_$_CardDto(
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      image: image == freezed
+      image: null == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String,
-      selectedToGame: selectedToGame == freezed
+      selectedToGame: null == selectedToGame
           ? _value.selectedToGame
           : selectedToGame // ignore: cast_nullable_to_non_nullable
               as int,
@@ -143,31 +130,28 @@ class _$_CardDto extends _CardDto {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CardDto &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.image, image) &&
-            const DeepCollectionEquality()
-                .equals(other.selectedToGame, selectedToGame));
+            other is _$_CardDto &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.image, image) || other.image == image) &&
+            (identical(other.selectedToGame, selectedToGame) ||
+                other.selectedToGame == selectedToGame));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(image),
-      const DeepCollectionEquality().hash(selectedToGame));
+  int get hashCode => Object.hash(runtimeType, name, image, selectedToGame);
 
   @JsonKey(ignore: true)
   @override
-  _$CardDtoCopyWith<_CardDto> get copyWith =>
-      __$CardDtoCopyWithImpl<_CardDto>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_CardDtoCopyWith<_$_CardDto> get copyWith =>
+      __$$_CardDtoCopyWithImpl<_$_CardDto>(this, _$identity);
 }
 
 abstract class _CardDto extends CardDto {
   factory _CardDto(
-      {required String name,
-      required String image,
-      required int selectedToGame}) = _$_CardDto;
+      {required final String name,
+      required final String image,
+      required final int selectedToGame}) = _$_CardDto;
   _CardDto._() : super._();
 
   @override
@@ -178,6 +162,6 @@ abstract class _CardDto extends CardDto {
   int get selectedToGame;
   @override
   @JsonKey(ignore: true)
-  _$CardDtoCopyWith<_CardDto> get copyWith =>
+  _$$_CardDtoCopyWith<_$_CardDto> get copyWith =>
       throw _privateConstructorUsedError;
 }

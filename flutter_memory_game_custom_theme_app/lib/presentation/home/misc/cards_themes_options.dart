@@ -5,6 +5,7 @@ import 'package:flutter_memory_game_custom_theme_core/data/card/dc_data_source.d
 import 'package:flutter_memory_game_custom_theme_core/data/card/flintstones_data_source.dart';
 import 'package:flutter_memory_game_custom_theme_core/data/card/simpsons_data_source.dart';
 import 'package:flutter_memory_game_custom_theme_core/data/card/thundercats_data_source.dart';
+import 'package:flutter_memory_game_custom_theme_core/data/card/world_cup_2022_data_source.dart';
 import 'package:flutter_memory_game_custom_theme_design_system/domain/theme/theme.dart';
 import 'package:flutter_memory_game_custom_theme_design_system/presentation/components/carousel_slider/model/carousel_slider_model.dart';
 
@@ -36,5 +37,9 @@ final cardsThemesOptions = [
   CarouselSliderModel(
     theme: ThemeCard.flintstones(),
     cardDataSource: const FlintstonesDataSource(),
+  ),
+  CarouselSliderModel(
+    theme: ThemeCard.worldCup2022(),
+    cardDataSource: const WorldCup2022DataSource(),
   ),
 ];

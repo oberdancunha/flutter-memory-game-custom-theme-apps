@@ -12,23 +12,7 @@ part of 'carousel_slider_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$CarouselSliderModelTearOff {
-  const _$CarouselSliderModelTearOff();
-
-  _CarouselSliderModel call(
-      {required ThemeCard theme, required CardDataSource cardDataSource}) {
-    return _CarouselSliderModel(
-      theme: theme,
-      cardDataSource: cardDataSource,
-    );
-  }
-}
-
-/// @nodoc
-const $CarouselSliderModel = _$CarouselSliderModelTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$CarouselSliderModel {
@@ -44,53 +28,58 @@ mixin _$CarouselSliderModel {
 abstract class $CarouselSliderModelCopyWith<$Res> {
   factory $CarouselSliderModelCopyWith(
           CarouselSliderModel value, $Res Function(CarouselSliderModel) then) =
-      _$CarouselSliderModelCopyWithImpl<$Res>;
+      _$CarouselSliderModelCopyWithImpl<$Res, CarouselSliderModel>;
+  @useResult
   $Res call({ThemeCard theme, CardDataSource cardDataSource});
 
   $ThemeCardCopyWith<$Res> get theme;
 }
 
 /// @nodoc
-class _$CarouselSliderModelCopyWithImpl<$Res>
+class _$CarouselSliderModelCopyWithImpl<$Res, $Val extends CarouselSliderModel>
     implements $CarouselSliderModelCopyWith<$Res> {
   _$CarouselSliderModelCopyWithImpl(this._value, this._then);
 
-  final CarouselSliderModel _value;
   // ignore: unused_field
-  final $Res Function(CarouselSliderModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? theme = freezed,
-    Object? cardDataSource = freezed,
+    Object? theme = null,
+    Object? cardDataSource = null,
   }) {
     return _then(_value.copyWith(
-      theme: theme == freezed
+      theme: null == theme
           ? _value.theme
           : theme // ignore: cast_nullable_to_non_nullable
               as ThemeCard,
-      cardDataSource: cardDataSource == freezed
+      cardDataSource: null == cardDataSource
           ? _value.cardDataSource
           : cardDataSource // ignore: cast_nullable_to_non_nullable
               as CardDataSource,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ThemeCardCopyWith<$Res> get theme {
     return $ThemeCardCopyWith<$Res>(_value.theme, (value) {
-      return _then(_value.copyWith(theme: value));
+      return _then(_value.copyWith(theme: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$CarouselSliderModelCopyWith<$Res>
+abstract class _$$_CarouselSliderModelCopyWith<$Res>
     implements $CarouselSliderModelCopyWith<$Res> {
-  factory _$CarouselSliderModelCopyWith(_CarouselSliderModel value,
-          $Res Function(_CarouselSliderModel) then) =
-      __$CarouselSliderModelCopyWithImpl<$Res>;
+  factory _$$_CarouselSliderModelCopyWith(_$_CarouselSliderModel value,
+          $Res Function(_$_CarouselSliderModel) then) =
+      __$$_CarouselSliderModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({ThemeCard theme, CardDataSource cardDataSource});
 
   @override
@@ -98,27 +87,25 @@ abstract class _$CarouselSliderModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$CarouselSliderModelCopyWithImpl<$Res>
-    extends _$CarouselSliderModelCopyWithImpl<$Res>
-    implements _$CarouselSliderModelCopyWith<$Res> {
-  __$CarouselSliderModelCopyWithImpl(
-      _CarouselSliderModel _value, $Res Function(_CarouselSliderModel) _then)
-      : super(_value, (v) => _then(v as _CarouselSliderModel));
+class __$$_CarouselSliderModelCopyWithImpl<$Res>
+    extends _$CarouselSliderModelCopyWithImpl<$Res, _$_CarouselSliderModel>
+    implements _$$_CarouselSliderModelCopyWith<$Res> {
+  __$$_CarouselSliderModelCopyWithImpl(_$_CarouselSliderModel _value,
+      $Res Function(_$_CarouselSliderModel) _then)
+      : super(_value, _then);
 
-  @override
-  _CarouselSliderModel get _value => super._value as _CarouselSliderModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? theme = freezed,
-    Object? cardDataSource = freezed,
+    Object? theme = null,
+    Object? cardDataSource = null,
   }) {
-    return _then(_CarouselSliderModel(
-      theme: theme == freezed
+    return _then(_$_CarouselSliderModel(
+      theme: null == theme
           ? _value.theme
           : theme // ignore: cast_nullable_to_non_nullable
               as ThemeCard,
-      cardDataSource: cardDataSource == freezed
+      cardDataSource: null == cardDataSource
           ? _value.cardDataSource
           : cardDataSource // ignore: cast_nullable_to_non_nullable
               as CardDataSource,
@@ -147,29 +134,27 @@ class _$_CarouselSliderModel extends _CarouselSliderModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CarouselSliderModel &&
-            const DeepCollectionEquality().equals(other.theme, theme) &&
-            const DeepCollectionEquality()
-                .equals(other.cardDataSource, cardDataSource));
+            other is _$_CarouselSliderModel &&
+            (identical(other.theme, theme) || other.theme == theme) &&
+            (identical(other.cardDataSource, cardDataSource) ||
+                other.cardDataSource == cardDataSource));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(theme),
-      const DeepCollectionEquality().hash(cardDataSource));
+  int get hashCode => Object.hash(runtimeType, theme, cardDataSource);
 
   @JsonKey(ignore: true)
   @override
-  _$CarouselSliderModelCopyWith<_CarouselSliderModel> get copyWith =>
-      __$CarouselSliderModelCopyWithImpl<_CarouselSliderModel>(
+  @pragma('vm:prefer-inline')
+  _$$_CarouselSliderModelCopyWith<_$_CarouselSliderModel> get copyWith =>
+      __$$_CarouselSliderModelCopyWithImpl<_$_CarouselSliderModel>(
           this, _$identity);
 }
 
 abstract class _CarouselSliderModel extends CarouselSliderModel {
   const factory _CarouselSliderModel(
-      {required ThemeCard theme,
-      required CardDataSource cardDataSource}) = _$_CarouselSliderModel;
+      {required final ThemeCard theme,
+      required final CardDataSource cardDataSource}) = _$_CarouselSliderModel;
   const _CarouselSliderModel._() : super._();
 
   @override
@@ -178,6 +163,6 @@ abstract class _CarouselSliderModel extends CarouselSliderModel {
   CardDataSource get cardDataSource;
   @override
   @JsonKey(ignore: true)
-  _$CarouselSliderModelCopyWith<_CarouselSliderModel> get copyWith =>
+  _$$_CarouselSliderModelCopyWith<_$_CarouselSliderModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
