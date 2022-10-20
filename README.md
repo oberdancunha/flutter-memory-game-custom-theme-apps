@@ -15,8 +15,8 @@ Algumas das tecnologias/bibliotecas utilizadas na construção do aplicativo for
  - flutter_screenutil 5.5.4
  - carousel_slider: 4.0.0
  - dart_code_metrics 4.10.1
- - freezed_annotation: 1.1.0
- - freezed: 1.1.0
+ - freezed_annotation: 2.2.0
+ - freezed: 2.2.0
  - lint 1.8.2
  - mocktail 0.1.4
  - triple_test: 0.0.8
@@ -98,6 +98,12 @@ Abaixo estão as cartas disponíveis com seus respectivos temas. A primeira figu
   />
   <img
     src="images/flintstones.png"
+    width="230"
+    height="450"
+    border= "1px solid black"
+  />
+  <img
+    src="images/world_cup_2022.png"
     width="230"
     height="450"
     border= "1px solid black"
