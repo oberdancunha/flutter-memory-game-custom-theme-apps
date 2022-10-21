@@ -1,7 +1,7 @@
 import 'package:flutter_memory_game_custom_theme_core/application/card/card_state.dart';
 import 'package:flutter_memory_game_custom_theme_core/application/card/card_store.dart';
 import 'package:flutter_memory_game_custom_theme_core/domain/card/card.dart';
-import 'package:flutter_memory_game_custom_theme_core/infrastructure/card/card_repository.dart';
+import 'package:flutter_memory_game_custom_theme_core/domain/card/i_card_repository.dart';
 import 'package:flutter_memory_game_custom_theme_dependency_module/flutter_memory_game_custom_theme_dependency_module.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
@@ -9,7 +9,7 @@ import 'package:triple_test/triple_test.dart';
 
 import '../../mock_data/kids_activities_data_mocked.dart';
 
-class MockCardRepository extends Mock implements CardRepository {}
+class MockCardRepository extends Mock implements ICardRepository {}
 
 void main() {
   late MockCardRepository mockCardRepository;
