@@ -20,7 +20,7 @@ Algumas das tecnologias/bibliotecas utilizadas na construção do aplicativo for
  - lint 1.8.2
  - mocktail 0.1.4
  - triple_test: 0.0.8
- - flutter_launcher_icons https://github.com/Davenchy/flutter_launcher_icons.git
+ - flutter_launcher_icons: ^0.10.0
  - flutter_native_splash 2.0.5
 
 Além dessas, há também outras bibliotecas. O pubspec.yaml possui a lista completa das bibliotecas utilizadas.
